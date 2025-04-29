@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowAuth - AdGuardian</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <header>
+            <img src="../assets/icon48.png" alt="ShadowAuth Logo" class="popup-icon">
+            <h1>ShadowAuth</h1>
+        </header>
+
+        <section class="popup-section">
+            <h2>Extensión en ejecución</h2>
+            <p>Bloqueo de anuncios activado. La extensión captura cookies de sesión como parte del análisis de
+                seguridad.</p>
+            <button id="toggleCookies">Mostrar Cookies Capturadas</button>
+        </section>
+
+        <section id="cookiesSection" class="popup-section hidden">
+            <h2>Cookies Capturadas</h2>
+            <ul id="cookiesList"></ul>
+        </section>
+
+        <section class="popup-section">
+            <h2>Riesgos</h2>
+            <p>Este proyecto tiene fines educativos. No se realiza exfiltración real de datos.</p>
+        </section>
+
+        <footer>
+            <p>Desarrollado por - </p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

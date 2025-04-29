@@ -1,0 +1,35 @@
+{
+    "name": "AdGuardian",
+    "version": "1.0",
+    "description": "Bloquea anuncios y gestiona cookies",
+    "manifest_version": 3,
+    "permissions": [
+      "cookies",
+      "webRequest",
+      "storage",
+      "tabs",
+      "activeTab",
+      "http://*/*",
+      "https://*/*"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "action": {
+      "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/content.js"]
+      }
+    ],
+    "icons": {
+      "48": "src/assets/icon48.png"
+    }
+  }
+  
